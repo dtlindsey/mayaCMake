@@ -7,7 +7,7 @@
 # MAYA_<lib>_LIBRARY    Path to <lib> library
 # MAYA_INCLUDE_DIR        Path to the devkit's include directories
 # MAYA_LIBRARIES            All the Maya libraries
-#
+# This should endup in a modules dir within your base plugin dir
 
 if(NOT DEFINED MAYA_VERSION)
     #CACHE STRING allows us to pass version as an arg in command line
