@@ -1,6 +1,8 @@
 #include "sampleCmd.h"
 #include <maya/MGlobal.h>
 
+
+
 const MString SampleCmd::kName("sampleCmd");
 
 void* SampleCmd::creator() {
