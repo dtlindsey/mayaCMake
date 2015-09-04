@@ -48,3 +48,17 @@ if(OPENMP_FOUND)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
   set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
 endif()
+
+
+#maya modules for packaging plugins
+# pluginProjectDir
+#    |
+#    |__icons
+#    |
+#    |__plug-ins
+#    |
+#    |__presets
+#    |
+#    |__scripts
+#    |
+#    |__<module>.txt  name should match pluginProject basename
