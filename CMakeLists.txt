@@ -31,6 +31,15 @@ target_link_libraries(${PROJECT_NAME} ${MAYA_LIBRARIES})
 #
 # Function call that puts it all together
 MAYA_PLUGIN(${PROJECT_NAME})
+# Install the plugins
+if(WIN32)
+   # not sure if this one works yet
+   install(TARGETS ${PROJECT_NAME} ${MAYA_TARGET_TYPE} DESTINATION plug-ins\win\${MAYA_VERSION})
+elseif(APPLE)
+   install(TARGETS ${PROJECT_NAME} ${MAYA_TARGET_TYPE} DESTINATION plug-ins/osx/${MAYA_VERSION})
+else()
+   install(TARGETS ${PROJECT_NAME} ${MAYA_TARGET_TYPE} DESTINATION plug-ins/linux/${MAYA_VERSION})
+endif()
 
 # Using OpenMP
 find_package(OpenMP)
